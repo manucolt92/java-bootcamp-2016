@@ -177,8 +177,10 @@ You will commit all your code on a daily basis, when you finish your practice.
 
 #####Practice:#####
 
+Note that you don't need to create real database connections, [just mock it](https://en.wikipedia.org/wiki/Mock_object) (create a simulation of them).
+
 1. Create a singleton example for a database connection.
-2. Create a abstract factory example for diferent type of SQL connections. See [this](http://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm) example 
+2. Create a abstract factory example for diferent type of SQL connections. See [this](http://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm) example.
 3. Create a proxy example for database accesor clases.
 4. Create a builder example for database connection.
 
