@@ -1,6 +1,6 @@
 ﻿# Java BootCamp base folders layout
 
-hola hola oooooooooooooooooo
+hola hola ooooooooooooooooooktkt jjjjj
 
 Please, use this repository as a base for you training phase. The idea is to
 fork this project so everyone use the same folder structure for the
