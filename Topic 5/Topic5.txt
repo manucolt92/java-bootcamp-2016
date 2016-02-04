@@ -1,0 +1,99 @@
+--topic 5
+--practice 1
+
+use highschool
+
+db.student.insert({_id: 1, firstname: "Carlos", lastname: "Primero", dateOfBirth: new Date (1993-01-04)});
+db.student.insert({_id: 2, firstname: "Carlos", lastname: "Segundo", dateOfBirth: new Date (1993-02-04)});
+db.student.insert({_id: 3, firstname: "Carlos", lastname: "Tercero", dateOfBirth: new Date (1993-03-04)});
+db.student.insert({_id: 4, firstname: "Carlos", lastname: "Cuarto", dateOfBirth: new Date (1993-04-04)});
+db.student.insert({_id: 5, firstname: "Carlos", lastname: "Quinto", dateOfBirth: new Date (1993-05-04)});
+db.student.insert({_id: 6, firstname: "Carlos", lastname: "Sexto", dateOfBirth:  new Date (1993-06-04)});
+db.student.insert({_id: 7, firstname: "Carlos", lastname: "Septimo", dateOfBirth: new Date (1993-07-04)});
+db.student.insert({_id: 8, firstname: "Carlos", lastname: "Octavo", dateOfBirth: new Date (1993-08-04)});
+db.student.insert({_id: 9, firstname: "Carlos", lastname: "Noveno", dateOfBirth: new Date (1993-09-04)});
+db.student.insert({_id: 10, firstname: "Carlos", lastname: "Decimo", dateOfBirth: new Date (1993-10-04)});
+db.student.insert({_id: 11, firstname: "Pio", lastname: "Primero", dateOfBirth: new Date (1993-01-05)});
+db.student.insert({_id: 12, firstname: "Pio", lastname: "Segundo", dateOfBirth: new Date (1993-02-05)});
+db.student.insert({_id: 13, firstname: "Pio", lastname: "Tercero", dateOfBirth: new Date (1993-03-05)});
+db.student.insert({_id: 14, firstname: "Pio", lastname: "Cuarto", dateOfBirth: new Date (1993-04-05)});
+db.student.insert({_id: 15, firstname: "Pio", lastname: "Quinto", dateOfBirth: new Date (1993-05-05)});
+db.student.insert({_id: 16, firstname: "Pio", lastname: "Sexto", dateOfBirth: new Date (1993-06-05)});
+db.student.insert({_id: 17, firstname: "Pio", lastname: "Septimo", dateOfBirth: new Date (1993-07-05)});
+db.student.insert({_id: 18, firstname: "Pio", lastname: "Octavo", dateOfBirth: new Date (1993-08-05)});
+db.student.insert({_id: 19, firstname: "Pio", lastname: "Noveno", dateOfBirth: new Date (1993-09-05)});
+db.student.insert({_id: 20, firstname: "Pio", lastname: "Decimo", dateOfBirth: new Date (1993-10-05)});		
+db.student.insert({_id: 21, firstname: "Augusto", lastname: "Primero", dateOfBirth: new Date (1993-01-06)});
+db.student.insert({_id: 22, firstname: "Augusto", lastname: "Segundo", dateOfBirth: new Date (1993-02-06)});
+db.student.insert({_id: 23, firstname: "Augusto", lastname: "Tercero", dateOfBirth: new Date (1993-03-06)});
+db.student.insert({_id: 24, firstname: "Augusto", lastname: "Cuarto", dateOfBirth: new Date (1993-04-06)});
+db.student.insert({_id: 25, firstname: "Augusto", lastname: "Quinto", dateOfBirth: new Date (1993-05-06)});
+db.student.insert({_id: 26, firstname: "Augusto", lastname: "Sexto", dateOfBirth: new Date (1993-06-06)});
+db.student.insert({_id: 27, firstname: "Augusto", lastname: "Septimo", dateOfBirth: new Date (1993-07-06)});
+db.student.insert({_id: 28, firstname: "Augusto", lastname: "Octavo", dateOfBirth: new Date (1993-08-06)});
+db.student.insert({_id: 29, firstname: "Augusto", lastname: "Noveno", dateOfBirth: new Date (1993-09-06)});
+db.student.insert({_id: 30, firstname: "Augusto", lastname: "Decimo", dateOfBirth: new Date (1993-10-06)});	
+
+
+db.teacher.insert(
+	[
+		{_id: 1, firstname: "Pedro", lastname: "Almodovar", dateOfBirth: "1987-04-25", assignedCourses: [ db.courses.find()[0].courseName , db.courses.find()[1].courseName ]},
+		{_id: 2, firstname: "Cristiano", lastname: "Ronaldo", dateOfBirth: "1988-05-26", assignedCourses: [ db.courses.find()[1].courseName ]},
+		{_id: 3, firstname: "Richie", lastname: "McCaw", dateOfBirth: "1989-09-27", assignedCourses: [ db.courses.find()[2].courseName ]}
+	]
+)
+
+db.course.insert(
+	[
+		{_id: 1, coursename: "Math", hoursperweek: 8, schedule: ["Monday" 09:00-13:00", "Wednesday" 09:00-13:00"]},
+		{_id: 2, coursename: "History", hoursperweek: 6, schedule: ["Tuesday" 09:00-13:00", "Thursday" 09:00-11:00"]},
+		{_id: 3, coursename: "Geography", hoursperweek: 6, schedule: ["Thursday" 11:00-13:00", "Friday" 09:00-13:00"]}
+	]
+)
+
+db.notes.insert(
+	[
+		{_id: 1, firstname: "Carlos", lastname: "Primero",  course_id:1 , firstNote:3 , secondNote:7 , thirdNote:3 , finalNote:4.33},
+		{_id: 2, firstname: "Carlos", lastname: "Segundo", course_id: 1, firstNote:8 , secondNote:9 , thirdNote:9 , finalNote:8.33},
+		{_id: 3, firstname: "Carlos", lastname: "Tercero", course_id: 1, firstNote:1 , secondNote:10 , thirdNote:7 , finalNote:6.0},
+		{_id: 4, firstname: "Carlos", lastname: "Cuarto", course_id: 1, firstNote:5 , secondNote:6 , thirdNote:7 , finalNote:6.0},
+		{_id: 5, firstname: "Carlos", lastname: "Quinto", course_id: 1, firstNote:6 , secondNote:7 , thirdNote:8 , finalNote:7.0},
+		{_id: 6, firstname: "Carlos", lastname: "Sexto", course_id: 1, firstNote:5 , secondNote:9 , thirdNote:9 , finalNote:7.66}},
+		{_id: 7, firstname: "Carlos", lastname: "Septimo", course_id: 1, firstNote:7 , secondNote:7 , thirdNote:7 , finalNote:7.0},
+		{_id: 8, firstname: "Carlos", lastname: "Octavo", course_id: 1, firstNote:8 , secondNote:8 , thirdNote:8 , finalNote:8.0},
+		{_id: 9, firstname: "Carlos", lastname: "Noveno", course_id: 1, firstNote:9 , secondNote:9 , thirdNote:9 , finalNote:9.0},
+		{_id: 10, firstname: "Carlos", lastname: "Decimo", course_id: 1, firstNote:10 , secondNote:10 , thirdNote:10 , finalNote:10.0},
+		{_id: 11, firstname: "Pio", lastname: "Primero", course_id: 2, firstNote:4 , secondNote:5 , thirdNote:3 , finalNote:4.0},
+		{_id: 12, firstname: "Pio", lastname: "Segundo", course_id: 2, firstNote:7 , secondNote:5 , thirdNote:9 , finalNote:7.0},
+		{_id: 13, firstname: "Pio", lastname: "Tercero", course_id: 2, firstNote:5 , secondNote:5 , thirdNote:1 , finalNote:3.66},
+		{_id: 14, firstname: "Pio", lastname: "Cuarto", course_id: 2, firstNote:9 , secondNote:8 , thirdNote:7 , finalNote:8.0},
+		{_id: 15, firstname: "Pio", lastname: "Quinto", course_id: 2, firstNote:6 , secondNote:5 , thirdNote:4 , finalNote:5.0},
+		{_id: 16, firstname: "Pio", lastname: "Sexto", course_id: 2, firstNote:9 , secondNote:1 , thirdNote:9 , finalNote:6.33},
+		{_id: 17, firstname: "Pio", lastname: "Septimo", course_id: 2, firstNote:7 , secondNote:7 , thirdNote:7 , finalNote:7.0},
+		{_id: 18, firstname: "Pio", lastname: "Octavo", course_id: 2, firstNote:6 , secondNote:6 , thirdNote:6 , finalNote:6.0},
+		{_id: 19, firstname: "Pio", lastname: "Noveno", course_id: 2, firstNote:9 , secondNote:2 , thirdNote:2 , finalNote:4.33},
+		{_id: 20, firstname: "Pio", lastname: "Decimo", course_id: 2, firstNote:4 , secondNote:4 , thirdNote:3 , finalNote:3.66},		
+		{_id: 21, firstname: "Augusto", lastname: "Primero", course_id: 3, firstNote:5 , secondNote:6 , thirdNote:7 , finalNote:6.0},
+		{_id: 22, firstname: "Augusto", lastname: "Segundo", course_id: 3, firstNote:3 , secondNote:1 , thirdNote:1 , finalNote:1.6},
+		{_id: 23, firstname: "Augusto", lastname: "Tercero", course_id: 3, firstNote:9 , secondNote:8 , thirdNote:7 , finalNote:8.0},
+		{_id: 24, firstname: "Augusto", lastname: "Cuarto", course_id: 3, firstNote:7 , secondNote:8 , thirdNote:9 , finalNote:8.0},
+		{_id: 25, firstname: "Augusto", lastname: "Quinto", course_id: 3, firstNote:9 , secondNote:8 , thirdNote:8 , finalNote:8.33},
+		{_id: 26, firstname: "Augusto", lastname: "Sexto", course_id: 3, firstNote:1 , secondNote:9 , thirdNote:9 , finalNote:6.33},
+		{_id: 27, firstname: "Augusto", lastname: "Septimo", course_id: 3, firstNote:10 , secondNote:6 , thirdNote:8 , finalNote:8.0},
+		{_id: 28, firstname: "Augusto", lastname: "Octavo", course_id: 3, firstNote:9 , secondNote:2 , thirdNote:10 , finalNote:7.0},
+		{_id: 29, firstname: "Augusto", lastname: "Noveno", course_id: 3, firstNote:8 , secondNote:4 , thirdNote:4 , finalNote:5.33},
+		{_id: 30, firstname: "Augusto", lastname: "Decimo", course_id: 3, firstNote:3 , secondNote:7 , thirdNote:7 , finalNote:5.66}
+	]
+)
+
+--practice 2
+
+db.notes.find({finalNote: {$gt: 4}, course_id: 1}, {_id: 0, course_id: 0, firstNote: 0, secondNote: 0, thirdNote: 0, finalNote: 0}).pretty()
+
+--practice 3
+
+db.teacher.find( {_id: 1} , {assignedCourses: 1, _id: 0} ).sort( { assignedCourses:1 } ).pretty()
+		
+		
+		
+		
