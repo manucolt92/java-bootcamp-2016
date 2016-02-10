@@ -30,13 +30,13 @@ public class ProductServiceImp implements ProductService {
 	
 	public List<Product> findProductByName(String name){
 		List<Product> products= new ArrayList<Product>();
-		products= productRepo.findByProductName(name);
+		products= productRepo.findProductByName(name);
 		return products;
 	}
 	
 	public List<Product> findProductByCategory(String category){
 		List<Product> products= new ArrayList<Product>();
-		products= productRepo.findByProductName(category);
+		products= productRepo.findProductByName(category);
 		return products;
 	}
 	
