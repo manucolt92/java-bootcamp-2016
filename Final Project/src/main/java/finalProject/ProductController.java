@@ -1,6 +1,8 @@
 package finalProject;
 
 import java.util.List;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,17 +10,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
+@Component
 @Configuration
-@RequestMapping("/products")
+@RequestMapping("/product")
+@ComponentScan("finalProject")
+@Api(value= "Product", description= "All operations related to products")
 public class ProductController {
 	
 	@Autowired
 	private ProductService productService;
 	private final AtomicLong counter = new AtomicLong();
 	
-	
+	@ApiOperation(value = "Add a new product to the system")
 	@RequestMapping(value= "/addProduct", method= RequestMethod.POST)		
 	String addProduct(@RequestParam(value= "name")String name,
 			@RequestParam(value= "category")String category, 
